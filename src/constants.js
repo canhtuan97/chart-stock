@@ -1,0 +1,1 @@
+export const BE_HOST = 'https://fac-chart.factorychain.io/v0'

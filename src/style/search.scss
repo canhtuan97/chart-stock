@@ -1,0 +1,91 @@
+.search {
+  padding: 10px 20px;
+  background-color: #142028;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.058823529411764705);
+  box-shadow: none;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  &-container {
+    width: 100%;
+  }
+  &-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .form-gr {
+      width: 100%;
+      position: relative;
+      .fa-search {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        color: #fff;
+        font-size: 18px;
+        // font-weight: 400;
+      }
+      .fa-filter{
+        position: absolute;
+        top: 50%;
+        right: 1px;
+        transform: translateY(-50%);
+        color: #00b8d8;
+        font-size: 18px;
+      }
+      input {
+        font-size: 12px;
+        outline: none;
+        border-radius: 4px;
+        background: hsla(0, 0%, 100%, 0.12156862745098039) !important;
+        padding: 4px 0px 4px 38px;
+        font-weight: 300 !important;
+        transition: box-shadow 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06),
+          border 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06);
+        width: 100%;
+        color: #cacedb !important;
+        border: 1px solid rgba(134, 142, 150, 0.25882352941176473) !important;
+        width: 100%;
+        transition: width 0.3s ease-in-out;
+        z-index: 2;
+        &.active {
+          width: calc(100% - 28px);
+          transition: width 0.2s ease-in-out;
+        }
+      }
+    }
+    .search-icon {
+      color: #00b8d8;
+      font-size: 18px;
+    }
+    .icon-left {
+      margin-right: 10px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    .icon-right {
+      margin-left: 10px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .4s;
+      cursor: pointer;
+      &.active{
+          opacity: 1;
+          visibility: visible;
+          transition: all .4s;
+      }
+    }
+    .toolip-custom{
+      
+    }
+  }
+}
+.ant-tooltip-inner{
+    color: #cacedb !important;
+    background: rgba(33,33,33,.95) !important;
+    border: 1px solid rgba(134,142,150,.25882352941176473) !important;
+}
+.ant-tooltip-arrow-content{
+    background-color: #fff !important;
+}
