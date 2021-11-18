@@ -33,8 +33,8 @@ const ChartComponent = () => {
         const volumeChildArr = childArr.map((item) => item.volume);
         const record = {
           date: childArr[0].date,
-          open: childArr[childArr.length - 1].open,
-          close: childArr[0].close,
+          open: childArr[0].open,
+          close: childArr[childArr.length - 1].close,
           high: Math.max(...highChildArr),
           low: Math.min(...lowChildArr),
           volume: volumeChildArr.reduce((sum, item) => sum + item, 0),

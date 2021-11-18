@@ -97,10 +97,10 @@ class CandleStickChartWithMA extends React.Component {
     const xExtents = [start, end];
     const candlesAppearance = {
       wickStroke: function (d) {
-        return d.close > d.open ? "#ec5454" : "#26a69a";
+        return d.close >= d.open ? "#26a69a" : "#ec5454";
       },
       fill: function fill(d) {
-        return d.close > d.open ? "#ec5454" : "#26a69a";
+        return d.close >= d.open ? "#26a69a" : "#ec5454";
       },
       stroke: "#161825",
       candleStrokeWidth: 1,
@@ -131,7 +131,6 @@ class CandleStickChartWithMA extends React.Component {
       : {};
     return (
       <>
-       
         <ChartCanvas
           height={400}
           width={width}
@@ -289,7 +288,6 @@ class CandleStickChartWithMA extends React.Component {
         </Chart> */}
           <CrossHairCursor />
         </ChartCanvas>
-     
       </>
     );
   }
@@ -303,7 +301,7 @@ CandleStickChartWithMA.propTypes = {
 };
 
 CandleStickChartWithMA.defaultProps = {
-  type: "hybrid",
+  type: "svg",
 };
 CandleStickChartWithMA = fitWidth(CandleStickChartWithMA);
 
